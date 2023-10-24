@@ -1,12 +1,20 @@
+<!DOCTYPE html>
 <html lang="en">
 <script lang="JavaScript">
-    
+    function f1(){
+    let text = document.getElementById("area").value
+        let paragraph = document.createElement("p");
+        paragraph.textcontent=text
+        i=text.indexOf(" ")
+        text="фи"+text.substring(0,i)+"фи"
+        document.write(text)
+    }
+    butt.addEventListner("click", f1)
 </script>
-  <body>
-  <form>
-    <input type="button">
-    <textarea>Write here</textarea>
-  </form>
-    
-  </body>
+<body>
+<form>
+    <input id="button1" value="click me" onclick="f1()" type="button">
+    <textarea id="area">Write here</textarea>
+</form>
+</body>
 </html>
